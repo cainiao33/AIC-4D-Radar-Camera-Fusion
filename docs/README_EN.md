@@ -220,7 +220,7 @@ python sfa/quantize_model_163.py \
 
 **GIF Auto-Play Preview:**
 
-![AIC-4D Detection Preview](demo/preview.gif)
+<img src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/raw/main/demo/preview.gif" width="800" alt="AIC-4D Detection Preview">
 
 **Click to Play Full Video:**
 

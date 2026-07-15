@@ -215,7 +215,7 @@ python sfa/quantize_model_163.py \
 
 **GIF 自动播放预览：**
 
-![AIC-4D 检测效果预览](demo/preview.gif)
+<img src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/raw/main/demo/preview.gif" width="800" alt="AIC-4D 检测效果预览">
 
 **点击播放完整视频：**
 
