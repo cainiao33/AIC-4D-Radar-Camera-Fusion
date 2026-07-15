@@ -213,11 +213,13 @@ python sfa/quantize_model_163.py \
 
 ### 演示效果
 
-**GIF 自动播放预览：**
+**GIF 自动播放预览（2分钟完整演示）：**
 
-<img src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/raw/main/demo/preview.gif" width="800" alt="AIC-4D 检测效果预览">
+<img src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/raw/main/demo/preview_120s.gif" width="800" alt="AIC-4D 检测效果完整演示">
 
-**点击播放完整视频：**
+> 2分钟完整检测演示（3fps，400px宽）。如加载较慢，可观看下方视频或访问 [GitHub Release v1.0](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0)。
+
+**点击播放完整视频（更高画质）：**
 
 <video src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/download/v1.0/visualization_12fps.mp4" controls width="100%" poster="demo/000000_final.png"></video>
 

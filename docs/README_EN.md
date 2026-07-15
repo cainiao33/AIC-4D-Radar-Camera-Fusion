@@ -218,11 +218,13 @@ python sfa/quantize_model_163.py \
 
 ### Demo Results
 
-**GIF Auto-Play Preview:**
+**GIF Auto-Play Preview (2min Full Demo):**
 
-<img src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/raw/main/demo/preview.gif" width="800" alt="AIC-4D Detection Preview">
+<img src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/raw/main/demo/preview_120s.gif" width="800" alt="AIC-4D Detection Full Demo">
 
-**Click to Play Full Video:**
+> 2-minute full detection demo (3fps, 400px width). If loading is slow, watch the video below or visit [GitHub Release v1.0](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0).
+
+**Click to Play Full Video (Higher Quality):**
 
 <video src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/download/v1.0/visualization_12fps.mp4" controls width="100%" poster="demo/000000_final.png"></video>
 
