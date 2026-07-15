@@ -305,6 +305,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 📧 Contact
 
+- Competition Website: [AIC Global Campus AI Algorithm Elite Competition](https://www.aicomp.cn/)
 - Email: **2911684894@qq.com**
 
 ---
