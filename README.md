@@ -215,13 +215,17 @@ python sfa/quantize_model_163.py \
 
 > 上图展示了 AIC-4D 在 BEV 视角下的 3D 目标检测效果，白色背景配合渐变点云，检测框以不同颜色区分类别。
 
-### 演示视频
+### 演示效果
 
-### 演示视频（点击播放）
+**GIF 自动播放预览：**
+
+![AIC-4D 检测效果预览](demo/preview.gif)
+
+**点击播放完整视频：**
 
 <video src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/download/v1.0/visualization_12fps.mp4" controls width="100%" poster="demo/000000_final.png"></video>
 
-> 12fps 检测可视化效果。完整演示视频（含 OpenCV 渲染）请访问 [GitHub Release v1.0](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0)。
+> 完整演示视频（含 OpenCV 渲染）请访问 [GitHub Release v1.0](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0)。
 
 ---
 
