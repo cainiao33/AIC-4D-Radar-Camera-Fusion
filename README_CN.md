@@ -1,4 +1,4 @@
-# AIC-4D 毫米波雷达与单目摄像头融合算法国二开源方案
+#AIC-4D 毫米波雷达与单目摄像头融合算法国二开源方案 
 
 > 🏆 **AIC 全球校园人工智能算法精英大赛 · 算法挑战赛** — 全国二等奖开源方案
 
@@ -308,8 +308,8 @@ heads = {
 ## 📧 联系方式
 
 - 竞赛官网：[AIC 全球校园人工智能算法精英大赛](待补充)
-- 项目 Issues：[GitHub Issues](待补充)
-- 邮箱：待补充
+- 项目 Issues：[GitHub Issues](https://github.comainiao33/AIC-4D-Radar-Camera-Fusion/issues)
+- 邮箱：**2911684894@qq.com**
 
 ---
 

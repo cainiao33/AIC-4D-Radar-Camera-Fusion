@@ -312,8 +312,8 @@ heads = {
 ## 📧 联系方式
 
 - 竞赛官网：[AIC 全球校园人工智能算法精英大赛](待补充)
-- 项目 Issues：[GitHub Issues](待补充)
-- 邮箱：待补充
+- 项目 Issues：[GitHub Issues](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/issues)
+- 邮箱：**2911684894@qq.com**
 
 ---
 
