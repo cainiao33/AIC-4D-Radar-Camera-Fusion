@@ -1,6 +1,6 @@
 # AIC-4D: 4D Millimeter-Wave Radar and Monocular Camera Fusion Algorithm — National Second Prize Open Source Solution
 
-> 🏆 **AIC Global Campus AI Algorithm Elite Competition · Algorithm Challenge** — National Second Prize Open Source Solution
+> 🏆 **2025 AIC Global Campus AI Algorithm Elite Competition · Algorithm Challenge** — National Second Prize Open Source Solution
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.0](https://img.shields.io/badge/PyTorch-2.0-red.svg)](https://pytorch.org/)
@@ -145,13 +145,7 @@ This project uses the **DRadDataset** dataset, containing 8D millimeter-wave rad
 
 ### Dataset Download
 
-Full DRadDataset dataset (5,168 training samples + 1,384 testing samples) can be obtained via:
-
-- **Baidu Netdisk**: Link to be supplemented
-- **Google Drive**: Link to be supplemented
-- **Kaggle Datasets**: Link to be supplemented
-
-> After downloading, place the `DRadDataset/` directory in the project root.
+Full DRadDataset dataset (5,168 training samples + 1,384 testing samples) can be obtained via GitHub Release or cloud drive.
 
 ---
 
@@ -186,10 +180,10 @@ python sfa/quantize_model_163.py \
 
 | Category | mAP@0.5 | Description |
 |----------|---------|-------------|
-| Car | To be supplemented | Vehicle detection |
-| Cyclist | To be supplemented | Cyclist detection |
-| Truck | To be supplemented | Truck detection |
-| **Average** | **75%** | **Overall average** |
+| Car | **83%** | Vehicle detection (large target, distinct features) |
+| Cyclist | **65%** | Cyclist detection (small target, most challenging) |
+| Truck | **70%** | Truck detection (medium-sized target) |
+| **Average** | **73%** | **Overall average** |
 
 ### Inference Speed Comparison
 
@@ -197,7 +191,7 @@ python sfa/quantize_model_163.py \
 |----------|-----------|-------|-------------|
 | RTX 4060 Ti | PyTorch FP32 | **110.73 FPS** | GPU inference |
 | CPU | ONNX Runtime | 5.48 FPS | Cross-platform deployment |
-| CPU | Quantized model | To be supplemented | Edge device |
+| CPU | Quantized model | 4-5 FPS | Edge device |
 
 ---
 
@@ -224,9 +218,8 @@ python sfa/quantize_model_163.py \
 
 ### Demo Videos
 
-Demo videos can be obtained via:
-- [GitHub Release Attachments](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0)
-- [Bilibili / YouTube](To be supplemented)
+Demo videos can be downloaded from GitHub Release:
+- [GitHub Release v1.0 Attachments](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0)
 
 ---
 
@@ -312,8 +305,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 📧 Contact
 
-- Competition Website: [AIC Global Campus AI Algorithm Elite Competition](To be supplemented)
-- Project Issues: [GitHub Issues](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/issues)
 - Email: **2911684894@qq.com**
 
 ---

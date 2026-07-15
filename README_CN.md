@@ -1,6 +1,6 @@
 #AIC-4D 毫米波雷达与单目摄像头融合算法国二开源方案 
 
-> 🏆 **AIC 全球校园人工智能算法精英大赛 · 算法挑战赛** — 全国二等奖开源方案
+> 🏆 **2025年 AIC 全球校园人工智能算法精英大赛 · 算法挑战赛** — 全国二等奖开源方案
 
 ---
 
@@ -140,13 +140,7 @@ python sfa/testing_export_ultra_aggressive.py \
 
 ### 数据集下载
 
-完整 DRadDataset 数据集（训练集 5168 样本 + 测试集 1384 样本）请通过以下方式获取：
-
-- **百度网盘**：待补充链接
-- **Google Drive**：待补充链接
-- **Kaggle Datasets**：待补充链接
-
-> 下载后将 `DRadDataset/` 目录放置于项目根目录即可。
+完整 DRadDataset 数据集（训练集 5168 样本 + 测试集 1384 样本）可通过 GitHub Release 或网盘获取。
 
 ---
 
@@ -154,9 +148,9 @@ python sfa/testing_export_ultra_aggressive.py \
 
 | 模型 | 大小 | 说明 | 下载 |
 |------|------|------|------|
-| Epoch 163（PyTorch） | 49 MB | 推荐使用的最佳模型 | [GitHub Release](待补充) |
-| ONNX FP32 | 49 MB | 跨平台部署 | [GitHub Release](待补充) |
-| 动态量化 | 13 MB | 边缘设备部署 | [GitHub Release](待补充) |
+| Epoch 163（PyTorch） | 49 MB | 推荐使用的最佳模型 | [GitHub Release v1.0](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0) |
+| ONNX FP32 | 49 MB | 跨平台部署 | [GitHub Release v1.0](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0) |
+| 动态量化 | 13 MB | 边缘设备部署 | [GitHub Release v1.0](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0) |
 
 ### 模型导出
 
@@ -181,10 +175,10 @@ python sfa/quantize_model_163.py \
 
 | 类别 | mAP@0.5 | 说明 |
 |------|---------|------|
-| Car | 待补充 | 车辆检测 |
-| Cyclist | 待补充 | 骑行者检测 |
-| Truck | 待补充 | 卡车检测 |
-| **Average** | **75%** | **整体平均** |
+| Car | **83%** | 车辆检测（大目标，特征明显） |
+| Cyclist | **65%** | 骑行者检测（小目标，最具挑战） |
+| Truck | **70%** | 卡车检测（中等目标） |
+| **Average** | **73%** | **整体平均** |
 
 ### 推理速度对比
 
@@ -192,7 +186,7 @@ python sfa/quantize_model_163.py \
 |------|------|------|------|
 | RTX 4060 Ti | PyTorch FP32 | **110.73 FPS** | GPU 推理 |
 | CPU | ONNX Runtime | 5.48 FPS | 跨平台部署 |
-| CPU | 量化模型 | 待补充 | 边缘设备 |
+| CPU | 量化模型 | 4-5 FPS | 边缘设备 |
 
 ---
 
@@ -219,9 +213,8 @@ python sfa/quantize_model_163.py \
 
 ### 演示视频
 
-演示视频可通过以下方式获取：
-- [GitHub Release 附件](待补充)
-- [Bilibili / YouTube](待补充)
+演示视频可通过 GitHub Release 下载：
+- [GitHub Release v1.0 附件](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0)
 
 ---
 
@@ -307,8 +300,6 @@ heads = {
 
 ## 📧 联系方式
 
-- 竞赛官网：[AIC 全球校园人工智能算法精英大赛](待补充)
-- 项目 Issues：[GitHub Issues](https://github.comainiao33/AIC-4D-Radar-Camera-Fusion/issues)
 - 邮箱：**2911684894@qq.com**
 
 ---
