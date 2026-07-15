@@ -13,7 +13,7 @@
 
 This project is the **complete open-source solution of the National Second Prize** winner in the **AIC Global Campus AI Algorithm Elite Competition (Algorithm Challenge)**, focusing on **3D object detection with 8D millimeter-wave radar point cloud data**.
 
-Built upon the original SFA3D (Super Fast and Accurate 3D Object Detection), we have conducted in-depth optimization specifically for millimeter-wave radar data characteristics, proposing the **AIC-4D** detection framework that achieves breakthrough performance from 8D radar data to high-precision 3D detection.
+Built upon the original SFA3D (Super Fast and Accurate 3D Object Detection), we have conducted in-depth optimization specifically for millimeter-wave radar data characteristics, proposing the **SFA4D** detection framework that achieves breakthrough performance from 8D radar data to high-precision 3D detection.
 
 ### Core Innovations
 - **🎯 8D→4D Intelligent Mapping**: Pioneering data mapping scheme based on the 5th-dimensional SNR (Signal-to-Noise Ratio) intensity (P), mapping 8D radar point cloud `[x, y, z, Doppler, P, Range, Azimuth, Elevation]` to 4D point cloud `[x, y, z, intensity]`

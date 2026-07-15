@@ -8,7 +8,7 @@
 
 本项目是 **AIC 全球校园人工智能算法精英大赛（算法挑战赛）全国二等奖** 的完整开源方案，专注于 **8D 毫米波雷达点云数据** 的 3D 目标检测任务。
 
-在原始 SFA3D（Super Fast and Accurate 3D Object Detection）基础上，我们针对毫米波雷达数据特性进行了深度优化，提出了 **AIC-4D** 检测框架，实现了从 8 维雷达数据到高精度 3D 检测的突破性进展。
+在原始 SFA3D（Super Fast and Accurate 3D Object Detection）基础上，我们针对毫米波雷达数据特性进行了深度优化，提出了 **SFA4D** 检测框架，实现了从 8 维雷达数据到高精度 3D 检测的突破性进展。
 
 ### 核心创新
 - **🎯 8D→4D 智能映射**：首创基于第五维信噪比强度（P）的数据映射方案，将 8D 雷达点云 `[x, y, z, Doppler, P, Range, Azimuth, Elevation]` 映射为 4D 点云 `[x, y, z, intensity]`
