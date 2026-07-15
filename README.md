@@ -1,6 +1,6 @@
 # AIC-4D 毫米波雷达与单目摄像头融合算法国二开源方案
 
-> 🏆 **2025年 AIC 全球校园人工智能算法精英大赛 · 算法挑战赛** — 全国二等奖开源方案
+> 🏆 **2025年 AIC 全球校园人工智能算法精英大赛 · 算法挑战赛 — 4D毫米波雷达和单目摄像头的融合算法** — 全国二等奖开源方案
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.0](https://img.shields.io/badge/PyTorch-2.0-red.svg)](https://pytorch.org/)

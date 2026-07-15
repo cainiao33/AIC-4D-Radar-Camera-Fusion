@@ -1,6 +1,6 @@
 # AIC-4D: 4D Millimeter-Wave Radar and Monocular Camera Fusion Algorithm — National Second Prize Open Source Solution
 
-> 🏆 **2025 AIC Global Campus AI Algorithm Elite Competition · Algorithm Challenge** — National Second Prize Open Source Solution
+> 🏆 **2025 AIC Global Campus AI Algorithm Elite Competition · Algorithm Challenge — 4D Millimeter-Wave Radar and Monocular Camera Fusion Algorithm** — National Second Prize Open Source Solution
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.0](https://img.shields.io/badge/PyTorch-2.0-red.svg)](https://pytorch.org/)
