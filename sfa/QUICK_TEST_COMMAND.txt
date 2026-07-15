@@ -1,0 +1,28 @@
+# 163轮模型快速测试命令
+
+在sfa目录中执行以下命令：
+
+## 完整命令（一行）
+python testing_validation_evaluation.py --dataset-dir "../DRadDataset" --val-subdir "split/val" --pretrained_path "../checkpoints/sfa3d_8d_full_300epochs/Model_sfa3d_8d_full_300epochs_epoch_163.pth" --output-dir "../results/test_predictions" --num_samples 10 --peak_thresh 0.25 --nms_thresh 0.2
+
+## 分行显示（更容易阅读）
+python testing_validation_evaluation.py ^
+    --dataset-dir "../DRadDataset" ^
+    --val-subdir "split/val" ^
+    --pretrained_path "../checkpoints/sfa3d_8d_full_300epochs/Model_sfa3d_8d_full_300epochs_epoch_163.pth" ^
+    --output-dir "../results/test_predictions" ^
+    --num_samples 10 ^
+    --peak_thresh 0.25 ^
+    --nms_thresh 0.2
+
+## 参数说明
+- --dataset-dir: 数据集目录
+- --val-subdir: 验证集子目录
+- --pretrained_path: 163轮模型路径
+- --output-dir: 输出目录
+- --num_samples: 测试样本数量
+- --peak_thresh: 峰值阈值 (0.25)
+- --nms_thresh: NMS阈值 (0.2)
+
+## 如果命令成功运行，接下来计算mAP
+python calculate_map.py --pred_dir "../results/test_predictions" --gt_dir "../DRadDataset/split/val/label_2" --output_file "../results/test_map_results.json" --iou_thresholds 0.5 0.7

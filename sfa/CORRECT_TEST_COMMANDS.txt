@@ -1,0 +1,63 @@
+# 163轮模型正确测试命令
+
+## 方法1: 使用ImageSets索引 (推荐)
+python testing.py \
+    --dataset-dir "../DRadDataset" \
+    --val-subdir "split/val" \
+    --imagesets-dir "../DRadDataset/ImageSets" \
+    --pretrained_path "../checkpoints/sfa3d_8d_full_300epochs/Model_sfa3d_8d_full_300epochs_epoch_163.pth" \
+    --calc-metrics \
+    --iou-thresh 0.5 \
+    --num_samples 10 \
+    --peak_thresh 0.25 \
+    --save_test_output \
+    --kitti-output-dir "../results/163epoch_kitti_output"
+
+## 方法2: 不使用ImageSets，直接使用split/val目录
+python testing.py \
+    --dataset-dir "../DRadDataset" \
+    --val-subdir "split/val" \
+    --ignore-imagesets \
+    --pretrained_path "../checkpoints/sfa3d_8d_full_300epochs/Model_sfa3d_8d_full_300epochs_epoch_163.pth" \
+    --calc-metrics \
+    --iou-thresh 0.5 \
+    --num_samples 10 \
+    --peak_thresh 0.25 \
+    --save_test_output \
+    --kitti-output-dir "../results/163epoch_kitti_output"
+
+## 方法3: 使用原始超激进脚本
+python testing_export_ultra_aggressive.py \
+    --dataset-dir "../DRadDataset" \
+    --test-subdir "split/val" \
+    --pretrained_path "../checkpoints/sfa3d_8d_full_300epochs/Model_sfa3d_8d_full_300epochs_epoch_163.pth" \
+    --num_samples 10 \
+    --peak_thresh 0.25 \
+    --nms_thresh 0.2
+
+## 参数说明
+- --dataset-dir: 数据集根目录
+- --val-subdir: 验证集子目录 (split/val)
+- --imagesets-dir: ImageSets目录 (DRadDataset/ImageSets)
+- --pretrained_path: 163轮模型路径
+- --calc-metrics: 计算性能指标
+- --iou-thresh: IoU阈值 (0.5)
+- --num_samples: 测试样本数量
+- --peak_thresh: 峰值阈值 (0.25)
+- --save_test_output: 保存测试输出
+- --kitti-output-dir: KITTI格式输出目录
+- --ignore-imagesets: 忽略ImageSets，直接扫描目录
+
+## 建议执行顺序
+1. 先尝试方法2 (不使用ImageSets)
+2. 如果失败，尝试方法1 (使用ImageSets)
+3. 如果都失败，使用方法3 (原始超激进脚本)
+
+## 检查val.txt中的样本ID
+验证集样本ID示例: 007124, 002714, 004366, 007643, 003544等
+
+对应的文件应该在:
+- DRadDataset/split/val/image_2/007124.png
+- DRadDataset/split/val/velodyne/007124.bin (如果存在)
+- DRadDataset/split/val/calib/007124.txt
+- DRadDataset/split/val/label_2/007124.txt

@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# 虚拟环境
+venv/
+env/
+ENV/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 训练输出（临时/可重新生成）
+logs/
+results/
+checkpoints/
+*.log
+
+# 数据集（完整数据集不放入 Git，通过网盘下载）
+DRadDataset/
+DRadDataset - fs/
+
+# 模型文件（大文件，放 GitHub Release 附件）
+*.pth
+*.onnx
+*.pt
+*.pkl
+
+# 演示视频（大文件，放 GitHub Release 附件）
+*.mp4
+*.avi
+*.mov
+
+# 文档冗余（已有 Markdown 版本）
+docs/word文档/
+docs/word文档.zip
+*.docx
+*.doc
+
+# 其他系统文件
+.DS_Store
+Thumbs.db
+desktop.ini

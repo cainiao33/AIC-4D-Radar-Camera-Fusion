@@ -1,0 +1,1 @@
+python testing.py --dataset-dir "../DRadDataset" --val-subdir "training" --imagesets-dir "../DRadDataset/ImageSets" --pretrained_path "../checkpoints/sfa3d_8d_full_300epochs/Model_sfa3d_8d_full_300epochs_epoch_163.pth" --calc-metrics --iou-thresh 0.5 --num_samples 10 --peak_thresh 0.25 --save_test_output --kitti-output-dir "../results/163epoch_training_set_test"
