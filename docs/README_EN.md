@@ -1,4 +1,4 @@
-# AIC-4D: 4D Millimeter-Wave Radar and Monocular Camera Fusion Algorithm — National Second Prize Open Source Solution
+# SFA4D: 4D Millimeter-Wave Radar and Monocular Camera Fusion Algorithm — National Second Prize Open Source Solution
 
 > 🏆 **2025 AIC Global Campus AI Algorithm Elite Competition · Algorithm Challenge — 4D Millimeter-Wave Radar and Monocular Camera Fusion Algorithm** — National Second Prize Open Source Solution
 
@@ -40,7 +40,7 @@ Built upon the original SFA3D (Super Fast and Accurate 3D Object Detection), we 
 ## 📂 Project Structure
 
 ```
-AIC-4D/
+SFA4D/
 ├── sfa/                          # Core code directory
 │   ├── config/                   # Configuration files (BEV parameters, training parameters)
 │   ├── data_process/             # Data processing (Dataset, BEV generation, 8D→4D mapping)
@@ -74,8 +74,8 @@ AIC-4D/
 
 ```bash
 # Create virtual environment (recommended)
-conda create -n aic4d python=3.8
-conda activate aic4d
+conda create -n sfa4d python=3.8
+conda activate sfa4d
 
 # Install PyTorch (CUDA 11.8)
 pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 --index-url https://download.pytorch.org/whl/cu118
@@ -90,7 +90,7 @@ pip install -r requirements.txt
 # Single GPU quick training (3 epochs, for environment verification)
 python sfa/train.py \
     --num_epochs 3 \
-    --saved_fn aic4d_test \
+    --saved_fn sfa4d_test \
     --batch_size 4 \
     --dataset-dir ./sample_data \
     --root-dir ./ \
@@ -102,7 +102,7 @@ python sfa/train.py \
 ```bash
 python sfa/train.py \
     --num_epochs 300 \
-    --saved_fn aic4d_full \
+    --saved_fn sfa4d_full \
     --batch_size 16 \
     --dataset-dir ./DRadDataset \
     --root-dir ./ \
@@ -116,9 +116,9 @@ python sfa/train.py \
 ```bash
 # Ultra-aggressive NMS inference (recommended for validation/testing)
 python sfa/testing_export_ultra_aggressive.py \
-    --pretrained_path ./checkpoints/aic4d_full/Model_aic4d_full_epoch_163.pth \
+    --pretrained_path ./checkpoints/sfa4d_full/Model_sfa4d_full_epoch_163.pth \
     --dataset-dir ./DRadDataset \
-    --saved_fn aic4d_163_ultra \
+    --saved_fn sfa4d_163_ultra \
     --peak_thresh 0.25 \
     --nms_thresh 0.2 \
     --gpu_idx 0
@@ -162,12 +162,12 @@ Full DRadDataset dataset (5,168 training samples + 1,384 testing samples) can be
 ```bash
 # PyTorch → ONNX
 python sfa/export_to_onnx.py \
-    --model ./checkpoints/aic4d_full/Model_aic4d_full_epoch_163.pth \
-    --output ./onnx_models/aic4d_163_fp32.onnx
+    --model ./checkpoints/sfa4d_full/Model_sfa4d_full_epoch_163.pth \
+    --output ./onnx_models/sfa4d_163_fp32.onnx
 
 # Model Quantization
 python sfa/quantize_model_163.py \
-    --model ./checkpoints/aic4d_full/Model_aic4d_full_epoch_163.pth \
+    --model ./checkpoints/sfa4d_full/Model_sfa4d_full_epoch_163.pth \
     --method dynamic \
     --output ./quantized_models/
 ```
@@ -214,13 +214,13 @@ python sfa/quantize_model_163.py \
 
 ![Detection Results](demo/000000_final.png)
 
-> The above image shows the 3D object detection results of AIC-4D in BEV perspective, with white background and gradient point clouds, detection boxes distinguished by different colors for categories.
+> The above image shows the 3D object detection results of SFA4D in BEV perspective, with white background and gradient point clouds, detection boxes distinguished by different colors for categories.
 
 ### Demo Results
 
 **GIF Auto-Play Preview (2min Full Demo):**
 
-<img src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/raw/main/demo/preview_120s.gif" width="800" alt="AIC-4D Detection Full Demo">
+<img src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/raw/main/demo/preview_120s.gif" width="800" alt="SFA4D Detection Full Demo">
 
 > 2-minute full detection demo (3fps, 400px width). If loading is slow, watch the video below or visit [GitHub Release v1.0](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0).
 

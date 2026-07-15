@@ -1,4 +1,4 @@
-#AIC-4D 毫米波雷达与单目摄像头融合算法国二开源方案 
+#SFA4D 毫米波雷达与单目摄像头融合算法国二开源方案 
 
 > 🏆 **2025年 AIC 全球校园人工智能算法精英大赛 · 算法挑战赛 — 4D毫米波雷达和单目摄像头的融合算法** — 全国二等奖开源方案
 
@@ -35,7 +35,7 @@
 ## 📂 项目结构
 
 ```
-AIC-4D/
+SFA4D/
 ├── sfa/                          # 核心代码目录
 │   ├── config/                   # 配置文件（BEV 参数、训练参数）
 │   ├── data_process/             # 数据处理（Dataset、BEV 生成、8D→4D 映射）
@@ -69,8 +69,8 @@ AIC-4D/
 
 ```bash
 # 创建虚拟环境（推荐）
-conda create -n aic4d python=3.8
-conda activate aic4d
+conda create -n sfa4d python=3.8
+conda activate sfa4d
 
 # 安装 PyTorch（CUDA 11.8）
 pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 --index-url https://download.pytorch.org/whl/cu118
@@ -85,7 +85,7 @@ pip install -r requirements.txt
 # 单 GPU 快速训练（3 epoch，用于验证环境）
 python sfa/train.py \
     --num_epochs 3 \
-    --saved_fn aic4d_test \
+    --saved_fn sfa4d_test \
     --batch_size 4 \
     --dataset-dir ./sample_data \
     --root-dir ./ \
@@ -97,7 +97,7 @@ python sfa/train.py \
 ```bash
 python sfa/train.py \
     --num_epochs 300 \
-    --saved_fn aic4d_full \
+    --saved_fn sfa4d_full \
     --batch_size 16 \
     --dataset-dir ./DRadDataset \
     --root-dir ./ \
@@ -111,9 +111,9 @@ python sfa/train.py \
 ```bash
 # 超激进 NMS 推理（推荐，用于验证/测试）
 python sfa/testing_export_ultra_aggressive.py \
-    --pretrained_path ./checkpoints/aic4d_full/Model_aic4d_full_epoch_163.pth \
+    --pretrained_path ./checkpoints/sfa4d_full/Model_sfa4d_full_epoch_163.pth \
     --dataset-dir ./DRadDataset \
-    --saved_fn aic4d_163_ultra \
+    --saved_fn sfa4d_163_ultra \
     --peak_thresh 0.25 \
     --nms_thresh 0.2 \
     --gpu_idx 0
@@ -157,12 +157,12 @@ python sfa/testing_export_ultra_aggressive.py \
 ```bash
 # PyTorch → ONNX
 python sfa/export_to_onnx.py \
-    --model ./checkpoints/aic4d_full/Model_aic4d_full_epoch_163.pth \
-    --output ./onnx_models/aic4d_163_fp32.onnx
+    --model ./checkpoints/sfa4d_full/Model_sfa4d_full_epoch_163.pth \
+    --output ./onnx_models/sfa4d_163_fp32.onnx
 
 # 模型量化
 python sfa/quantize_model_163.py \
-    --model ./checkpoints/aic4d_full/Model_aic4d_full_epoch_163.pth \
+    --model ./checkpoints/sfa4d_full/Model_sfa4d_full_epoch_163.pth \
     --method dynamic \
     --output ./quantized_models/
 ```
@@ -209,13 +209,13 @@ python sfa/quantize_model_163.py \
 
 ![检测效果](demo/000000_final.png)
 
-> 上图展示了 AIC-4D 在 BEV 视角下的 3D 目标检测效果，白色背景配合渐变点云，检测框以不同颜色区分类别。
+> 上图展示了 SFA4D 在 BEV 视角下的 3D 目标检测效果，白色背景配合渐变点云，检测框以不同颜色区分类别。
 
 ### 演示效果
 
 **GIF 自动播放预览（2分钟完整演示）：**
 
-<img src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/raw/main/demo/preview_120s.gif" width="800" alt="AIC-4D 检测效果完整演示">
+<img src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/raw/main/demo/preview_120s.gif" width="800" alt="SFA4D 检测效果完整演示">
 
 > 2分钟完整检测演示（3fps，400px宽）。如加载较慢，可观看下方视频或访问 [GitHub Release v1.0](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0)。
 
