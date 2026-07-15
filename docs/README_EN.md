@@ -216,10 +216,11 @@ python sfa/quantize_model_163.py \
 
 > The above image shows the 3D object detection results of AIC-4D in BEV perspective, with white background and gradient point clouds, detection boxes distinguished by different colors for categories.
 
-### Demo Videos
+### Demo Videos (Click to Play)
 
-Demo videos can be downloaded from GitHub Release:
-- [GitHub Release v1.0 Attachments](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0)
+<video src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/download/v1.0/visualization_12fps.mp4" controls width="100%" poster="demo/000000_final.png"></video>
+
+> 12fps detection visualization. Full demo video (with OpenCV rendering) available at [GitHub Release v1.0](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0).
 
 ---
 

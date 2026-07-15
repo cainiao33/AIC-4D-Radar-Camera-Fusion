@@ -213,8 +213,11 @@ python sfa/quantize_model_163.py \
 
 ### 演示视频
 
-演示视频可通过 GitHub Release 下载：
-- [GitHub Release v1.0 附件](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0)
+### 演示视频（点击播放）
+
+<video src="https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/download/v1.0/visualization_12fps.mp4" controls width="100%" poster="demo/000000_final.png"></video>
+
+> 12fps 检测可视化效果。完整演示视频（含 OpenCV 渲染）请访问 [GitHub Release v1.0](https://github.com/cainiao33/AIC-4D-Radar-Camera-Fusion/releases/tag/v1.0)。
 
 ---
 
